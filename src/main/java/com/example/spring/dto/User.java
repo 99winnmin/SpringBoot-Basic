@@ -1,12 +1,14 @@
 package com.example.spring.dto;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.databind.PropertyNamingStrategies;
 import com.fasterxml.jackson.databind.annotation.JsonNaming;
 
 @JsonNaming(PropertyNamingStrategies.SnakeCaseStrategy.class)
+@JsonInclude(JsonInclude.Include.NON_NULL) // 널 값은 response에 포함하지 않게 해주는 설정
 public class User {
     private String name;
-    private int age;
+    private Integer age;
     //@JsonProperty("phone_number")
     private String phoneNumber;
     private String address;
@@ -19,7 +21,7 @@ public class User {
         this.name = name;
     }
 
-    public int getAge() {
+    public Integer getAge() {
         return age;
     }
 
