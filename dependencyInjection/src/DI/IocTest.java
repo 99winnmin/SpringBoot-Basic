@@ -1,4 +1,4 @@
-package ioc;
+package DI;
 
 public class IocTest {
     public static void main(String[] args) {

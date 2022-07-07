@@ -1,6 +1,4 @@
-package ioc;
-
-import java.util.Base64;
+package DI;
 
 public class Encoder {
     private IEncoder iEncoder;
