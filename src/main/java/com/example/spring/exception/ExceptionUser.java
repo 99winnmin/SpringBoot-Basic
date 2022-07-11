@@ -1,4 +1,4 @@
-package com.example.spring.dto;
+package com.example.spring.exception;
 
 import javax.validation.constraints.*;
 

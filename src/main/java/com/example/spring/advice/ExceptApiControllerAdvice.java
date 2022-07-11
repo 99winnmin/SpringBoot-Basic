@@ -1,8 +1,8 @@
 package com.example.spring.advice;
 
-import com.example.spring.controller.ExceptApiController;
-import com.example.spring.dto.Error;
-import com.example.spring.dto.ErrorResponse;
+import com.example.spring.exception.ExceptApiController;
+import com.example.spring.exception.Error;
+import com.example.spring.exception.ErrorResponse;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.BindingResult;
@@ -13,10 +13,8 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 import javax.validation.ConstraintViolationException;
 import javax.validation.Path;
-import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
