@@ -23,6 +23,8 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 import java.util.stream.StreamSupport;
 
+// (basePackageClasses = ExceptApiController.class) 이것으로 해당 ApiController에 대한 처리만 하겠다고 명시하는것
+// 없으면 전역처리임
 @RestControllerAdvice(basePackageClasses = ExceptApiController.class)
 public class ExceptApiControllerAdvice {
 
