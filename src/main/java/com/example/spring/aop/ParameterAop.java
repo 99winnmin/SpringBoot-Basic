@@ -20,7 +20,7 @@ public class ParameterAop {
 
     }
 
-    @Before("pointCut()")
+//    @Before("pointCut()")
     public void before(JoinPoint joinPoint){
         System.out.println("======before() AOP=======");
         MethodSignature methodSignature = (MethodSignature) joinPoint.getSignature();
@@ -35,7 +35,7 @@ public class ParameterAop {
         }
     }
 
-    @AfterReturning(value = "pointCut()", returning = "returnObj")
+//    @AfterReturning(value = "pointCut()", returning = "returnObj")
     public void afterReturn(JoinPoint joinPoint, Object returnObj){
         System.out.println("======afterReturn() AOP=======");
         System.out.println("return obj : "+returnObj);
