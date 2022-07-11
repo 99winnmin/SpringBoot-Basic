@@ -37,20 +37,22 @@ public class ObjectMapperTest {
 
 //        System.out.println(user);
 
+        // json 직렬화
         String json = objectMapper.writeValueAsString(user);
         System.out.println(json);
 
-        // json 읽어오기
+        // json 직렬화 결과 출력
         JsonNode jsonNode = objectMapper.readTree(json);
         String _name = jsonNode.get("name").asText();
         int _age = jsonNode.get("age").asInt();
         System.out.println("name : "+_name);
         System.out.println("age : "+_age);
 
+        // object는 문자열 받듯이 받으면 안됨
         JsonNode cars = jsonNode.get("cars");
         ArrayNode arrayNode = (ArrayNode)cars;
 
-        // object를 받아서 원하는 타입으로 변환시켜줌
+        // object를 받아서 원하는 타입으로 변환시켜줌, json 역직렬화
         List<Car> _cars = objectMapper.convertValue(arrayNode, new TypeReference<List<Car>>() {});
         System.out.println(_cars);
 
