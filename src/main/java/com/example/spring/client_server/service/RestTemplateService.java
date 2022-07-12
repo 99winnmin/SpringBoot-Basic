@@ -11,7 +11,7 @@ import java.net.URI;
 @Service
 public class RestTemplateService {
 
-    // http://localhost/api/server/hello
+    // http://localhost:9091/api/server/get
     // response 받아옴
     public UserResponse hello(){
         URI uri = UriComponentsBuilder
