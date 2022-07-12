@@ -25,7 +25,7 @@ public class RestTemplateService {
         System.out.println(uri.toString());
 
         RestTemplate restTemplate = new RestTemplate();
-        // http GET 방식으로 String Object를 가져오겠다
+        // http GET 방식으로 String Object를 가져오겠다 : getForObject
 //        String result = restTemplate.getForObject(uri, String.class);
         // http GET 방식으로 Entity(데이터)를 가져옴, entity에 담겨져 있는 것이 많음
         ResponseEntity<UserResponse> result = restTemplate.getForEntity(uri, UserResponse.class);
