@@ -1,6 +1,8 @@
 package JUnitTest;
 
-import JUnit.*;
+import com.example.spring.JUnit.component.Calculator;
+import com.example.spring.JUnit.component.DollarCalculator;
+import com.example.spring.JUnit.component.MarketApi;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
